@@ -1,13 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
 <title>HTML Blank Template</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta content="HTML Blank Template" name="description" />
-<link rel="stylesheet" href="stylesheets/base.css" type="text/css" />
-<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
-<script src="javascripts/jquery.js" type="text/javascript"></script>
-<script src="javascripts/main.js" type="text/javascript"></script>
+<link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<link rel="stylesheet" href="files/main.css" type="text/css" />
+<script src="files/jquery.js" type="text/javascript"></script>
+<script src="files/main.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -22,23 +22,6 @@
             <li><a href="/">Main Page [3]</a></li>
             <li><a href="#search">Search [4]</a></li>
         </ul>
-        <ul id="accessibility">
-            <li><a href="#" class="increaseFontSize" title="Increase font size">Increase font size</a></li>
-            <li><a href="#" class="normalFontSize" title="Normal font size">Normal font size</a></li>
-            <li><a href="#" class="decreaseFontSize" title="Decrease font size">Decrease font size</a></li>
-            <li><a href="#" class="highContrast" title="High contrast">High contrast</a></li>
-        </ul>
-    </div>
-
-    <div id="main" class="container">
-
-        <div id="content">
-            <a class="invisible-element" href="#startofcontent" id="startofcontent" accesskey="2">Start of content</a>
-            <div id="breadcrumbs">You are in: <a href="/">Main page</a></div>
-            <h2>Main Page</h2>
-            <a class="invisible-element" href="#endofcontent" id="endofcontent">End of content</a>
-        </div>
-
         <div id="menu">
             <a class="invisible-element" href="#iniciodomenu" id="iniciodomenu" accesskey="1">In&iacute;cio do menu</a>
             <ul>
@@ -47,16 +30,104 @@
                 <li><a href="#">Menu Item</a></li>
                 <li><a href="#">Menu Item</a></li>
                 <li><a href="#">Menu Item</a></li>
-                <li><a href="#">Menu Item</a></li>
-                <li><a href="#">Menu Item</a></li>
             </ul>
             <a class="invisible-element" href="#finaldomenu" id="finaldomenu">Final do menu</a>
+        </div>
+    </div>
+
+    <div id="main" class="container">
+
+        <div id="content">
+            <a class="invisible-element" href="#startofcontent" id="startofcontent" accesskey="2">Start of content</a>
+            <div id="breadcrumbs">You are in: <a href="/">Main page</a></div>
+            <h2>Page Title</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Lorem ipsum</th>
+                        <th>Dolor sit</th>
+                        <th>Consectetur</th>
+                        <th>Adipiscing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Adipiscing</td>
+                        <td>Elit</td>
+                        <td>Maecenas</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Est elit</td>
+                        <td>Convallis</td>
+                        <td>Nunc luctus</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>In bibendum</td>
+                        <td>Malesuada</td>
+                        <td>Integer mollis</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Est elit</td>
+                        <td>Convallis</td>
+                        <td>Nunc luctus</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>In bibendum</td>
+                        <td>Malesuada</td>
+                        <td>Integer mollis</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>In bibendum</td>
+                        <td>Malesuada</td>
+                        <td>Integer mollis</td>
+                        <td>50</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="invisible-element" href="#endofcontent" id="endofcontent">End of content</a>
+        </div>
+
+        <div id="sidebar">
+            <h3>Sidebar</h3>
+            <form method="post" action=".">
+                <div>
+                    <label for="id_name">Name:</label>
+                    <input type="text" name="name" id="id_name" />
+                </div>
+                <div>
+                    <label for="id_email">E-mail:</label>
+                    <input type="email" name="email" id="id_email" />
+                </div>
+                <div>
+                    <label for="id_subject">Subject:</label>
+                    <input type="text" name="subject" id="id_subject" />
+                </div>
+                <div>
+                    <label for="id_body">Mensagem:</label>
+                    <textarea name="body" id="id_body"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Send" />
+                </div>
+            </form>
         </div>
 
     </div>
 
     <div id="footer" class="container">
-        HTML Blank Template - Developed by Fabio Rocha (<a href="https://github.com/fabiorochafg">https://github.com/fabiorochafg</a> | <a href="mailto:fabiorochafg@gmail.com">fabiorochafg@gmail.com</a>)
+        HTML Blank Template - Developed by Fabio Rocha (<a href="http://fabiorocha.github.io">http://fabiorocha.github.io</a> | <a href="mailto:fabiorochafg@gmail.com">fabiorochafg@gmail.com</a>)
     </div>
 </div>
 </body>

@@ -1,0 +1,297 @@
+/* CSS Document - Developed by Fabio Rocha (http://fabiorochafg.github.io | fabiorochafg@gmail.com) */
+
+* {
+    border: 0 none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+a, a:link, a:active {
+    color: #666666;
+}
+a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+body {
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 69%;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+    clear: both;
+    cursor: pointer;
+    display: block;
+    font-size: 100%;
+    height: 26px;
+    padding: 0 5px;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: #666666;
+    color: #eeeeee;
+}
+code {
+    background: #F8F8F8;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+dd {
+    font-weight: bold;
+    padding: 0 0 2px;
+}
+dt {
+    clear: left;
+    float: left;
+    margin: 0 5px 0 0;
+}
+fieldset {
+    background: #F8F8F8;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    clear: both;
+    display: table;
+    margin: 10px 0 20px;
+    padding: 15px;
+}
+form {
+    margin: 10px 0;
+}
+h1 {
+    float: left;
+    margin: 10px 0;
+}
+h2 {
+    padding: 0 0 10px;
+}
+input[type="email"],
+input[type="file"],
+input[type="password"],
+input[type="text"] {
+    border: 1px solid #DDDDDD;
+    font-size: 110%;
+    margin: 0 0 5px;
+    padding: 0 1%;
+    height: 24px;
+}
+input[type="email"]:focus,
+input[type="file"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid #AAAAAA;
+}
+label {
+    margin: 0 0 2px;
+    padding: 0 2px 0 0;
+}
+select {
+    border: 1px solid #DDDDDD;
+    height: 24px;
+    margin: 0 0 5px;
+}
+select option {
+    padding: 3px 5px;
+}
+select[multiple="multiple"] {
+    height: auto;
+}
+select[multiple="multiple"] option {
+    padding: 5px;
+}
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+td, th {
+    padding: 5px;
+}
+tbody tr:nth-child(even) {
+    background: #f1f1f1;
+}
+thead tr {
+    background: #999;
+    color: #eee;
+}
+thead th {
+    text-align: left;
+}
+textarea {
+    border: 1px solid #DDDDDD;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 105%;
+    height: 130px;
+    margin: 1px 0 5px;
+    padding: 1%;
+    width: 480px;   
+}
+ul {
+    line-height: 1.5em;
+}
+ul ul {
+    padding: 0 0 0 15px;
+}
+
+/* Layout */
+#wrapper {
+    width: 100%;
+}
+.container {
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1% 2%;
+    width: 96%;
+}
+
+/* Header */
+#header h1 {
+    float: left;
+    margin: 0 2% 0 0;
+}
+#header h1 a {
+    background: url(../images/logo.png) no-repeat -6px 0;
+    display: block;
+    height: 100px;
+    text-indent: -9000px;
+    width: 186px;
+}
+#header h1 a:hover {
+    opacity: 0.8;
+}
+#accesskeys {
+    line-height: 0;
+}
+#accesskeys li {
+    display: block;
+    text-indent: -9000px;
+}
+#menu {
+    float: right;
+}
+#menu li {
+    float: left;
+    list-style: none;
+    margin: 0 0 0 30px;
+}
+#menu li a {
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    display: block;
+    font-size: 150%;
+    font-weight: bold;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: none;
+}
+#menu li a:hover {
+    border-bottom: 1px solid #999999;
+    color: #999999;
+}
+
+/* Content Area */
+#breadcrumbs {
+    padding: 0 0 10px;
+}
+#content {
+    float: left;
+    padding: 1% 2% 1% 0;
+    width: 79%;
+}
+#content ol,
+#content ul {
+    padding: 0 0 10px 20px;
+}
+#content p {
+    line-height: 1.5em;
+    padding: 0 0 10px;
+    text-align: justify;
+}
+#sidebar {
+    float: right;
+    padding: 1% 0;
+    width: 19%;
+}
+#sidebar input[type="email"],
+#sidebar input[type="file"],
+#sidebar input[type="password"],
+#sidebar input[type="text"],
+#sidebar textarea {
+    width: 97%;
+}
+
+/* Footer */
+#footer {
+    color: #666;
+    padding: 20px 0;
+    text-align: center;
+}
+#footer a {
+    color: #333;
+}
+#footer a:hover {
+    color: #666;
+}
+
+/* Classes */
+.invisible-element {
+    display: block;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    text-indent: -9000px;
+    width: 0;
+}
+
+/* Media-queries */
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    #content,
+    #sidebar {
+        display: inline-block;
+        float: none;
+        padding: 0 0 2%;
+        width: 100%;
+    }
+    #menu {
+        display: inline-block;
+        float: none;
+        padding: 0 0 2%;
+        width: 100%;
+    }
+    #menu li {  
+        margin: 0 20px 0 0;
+    }
+    #menu li a {
+        font-size: 120%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #content,
+    #sidebar {
+        display: inline-block;
+        float: none;
+        padding: 0 0 2%;
+        width: 100%;
+    }
+    #menu li {  
+        margin: 0 0 0 20px;
+    }
+    #menu li a {
+        font-size: 120%;
+    }
+}
+@media screen and (max-width: 800px) {
+    #menu {
+        display: inline-block;
+        float: none;
+        padding: 0 0 2%;
+        width: 100%;
+    }
+    #menu li {  
+        margin: 0 20px 0 0;
+    }
+}
