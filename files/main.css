@@ -140,6 +140,35 @@ ul ul {
 #wrapper {
     width: 100%;
 }
+.box {
+    margin: 0 -1%;
+    overflow: hidden;
+}
+.box > div {
+    background: #ccc;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+    width: 96%;
+}
+.box .box12 {
+    width: 96%;
+}
+.box .box6 {
+    width: 46%;
+}
+.box .box4 {
+    width: 29.3333%;
+}
+.box .box3 {
+    width: 21%;
+}
+.box .box2 {
+    width: 12.6666%;
+}
+.box .box1 {
+    width: 4.3333%;
+}
 .container {
     clear: both;
     margin: 0 auto;
