@@ -264,6 +264,28 @@ ul ul {
 }
 
 /* Media-queries */
+@media print {  
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    body {
+        color: #000000;
+        font: 9pt serif;
+    }
+    a:link, a:visited {
+        color: #333333;
+        text-decoration: none;
+    }
+    h1,
+    #footer,
+    #menu {
+        display: none !important;
+    }
+    table {
+        font: 8pt serif;
+    }
+}
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
     #menu li a {
         font-size: 120%;
