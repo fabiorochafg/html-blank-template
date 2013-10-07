@@ -62,7 +62,17 @@ form {
 }
 h1 {
     float: left;
-    margin: 10px 0;
+    margin: 0 2% 0 0;
+}
+h1 a {
+    background: url(../images/logo.png) no-repeat -6px 0;
+    display: block;
+    height: 100px;
+    text-indent: -9000px;
+    width: 186px;
+}
+h1 a:hover {
+    opacity: 0.8;
 }
 h2 {
     padding: 0 0 10px;
@@ -113,12 +123,13 @@ td, th {
 tbody tr:nth-child(even) {
     background: #f1f1f1;
 }
-thead tr {
-    background: #999;
-    color: #eee;
-}
 thead th {
+    font-size: 105%;
     text-align: left;
+}
+thead tr {
+    background: #999999;
+    color: #eeeeee;
 }
 textarea {
     border: 1px solid #DDDDDD;
@@ -135,8 +146,75 @@ ul {
 ul ul {
     padding: 0 0 0 15px;
 }
-
-/* Layout */
+#accesskeys {
+    line-height: 0;
+}
+#accesskeys li {
+    display: block;
+    text-indent: -9000px;
+}
+#breadcrumbs {
+    padding: 0 0 10px;
+}
+#content {
+    float: left;
+    padding: 1% 2% 1% 0;
+    width: 79%;
+}
+#content ol,
+#content ul {
+    padding: 0 0 10px 20px;
+}
+#content p {
+    line-height: 1.5em;
+    padding: 0 0 10px;
+    text-align: justify;
+}
+#footer {
+    color: #666;
+    padding: 20px 0;
+    text-align: center;
+}
+#footer a {
+    color: #333;
+}
+#footer a:hover {
+    color: #666;
+}
+#menu {
+    float: right;
+}
+#menu a {
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    display: block;
+    font-size: 150%;
+    font-weight: bold;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: none;
+}
+#menu a:hover {
+    border-bottom: 1px solid #999999;
+    color: #999999;
+}
+#menu li {
+    float: left;
+    list-style: none;
+    margin: 0 0 0 30px;
+}
+#sidebar {
+    float: right;
+    padding: 1% 0;
+    width: 19%;
+}
+#sidebar input[type="email"],
+#sidebar input[type="file"],
+#sidebar input[type="password"],
+#sidebar input[type="text"],
+#sidebar textarea {
+    width: 97%;
+}
 #wrapper {
     width: 100%;
 }
@@ -176,124 +254,17 @@ ul ul {
     padding: 1% 2%;
     width: 96%;
 }
-
-/* Header */
-#header h1 {
-    float: left;
-    margin: 0 2% 0 0;
-}
-#header h1 a {
-    background: url(../images/logo.png) no-repeat -6px 0;
-    display: block;
-    height: 100px;
-    text-indent: -9000px;
-    width: 186px;
-}
-#header h1 a:hover {
-    opacity: 0.8;
-}
-#accesskeys {
-    line-height: 0;
-}
-#accesskeys li {
-    display: block;
-    text-indent: -9000px;
-}
-#menu {
-    float: right;
-}
-#menu li {
-    float: left;
-    list-style: none;
-    margin: 0 0 0 30px;
-}
-#menu li a {
-    border-bottom: 1px solid #333333;
-    color: #333333;
-    display: block;
-    font-size: 150%;
-    font-weight: bold;
-    height: 100px;
-    line-height: 100px;
-    text-decoration: none;
-}
-#menu li a:hover {
-    border-bottom: 1px solid #999999;
-    color: #999999;
-}
-
-/* Content Area */
-#breadcrumbs {
-    padding: 0 0 10px;
-}
-#content {
-    float: left;
-    padding: 1% 2% 1% 0;
-    width: 79%;
-}
-#content ol,
-#content ul {
-    padding: 0 0 10px 20px;
-}
-#content p {
-    line-height: 1.5em;
-    padding: 0 0 10px;
-    text-align: justify;
-}
-#sidebar {
-    float: right;
-    padding: 1% 0;
-    width: 19%;
-}
-#sidebar input[type="email"],
-#sidebar input[type="file"],
-#sidebar input[type="password"],
-#sidebar input[type="text"],
-#sidebar textarea {
-    width: 97%;
-}
-
-/* Footer */
-#footer {
-    color: #666;
-    padding: 20px 0;
-    text-align: center;
-}
-#footer a {
-    color: #333;
-}
-#footer a:hover {
-    color: #666;
-}
-
-/* Classes */
 .invisible-element {
-    display: block;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    text-indent: -9000px;
-    width: 0;
+    display: block !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-indent: -9000px !important;
+    width: 0 !important;
 }
 
 /* Media-queries */
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    #content,
-    #sidebar {
-        display: inline-block;
-        float: none;
-        padding: 0 0 2%;
-        width: 100%;
-    }
-    #menu {
-        display: inline-block;
-        float: none;
-        padding: 0 0 2%;
-        width: 100%;
-    }
-    #menu li {  
-        margin: 0 20px 0 0;
-    }
     #menu li a {
         font-size: 120%;
     }
@@ -306,21 +277,30 @@ ul ul {
         padding: 0 0 2%;
         width: 100%;
     }
-    #menu li {  
-        margin: 0 0 0 20px;
-    }
-    #menu li a {
-        font-size: 120%;
-    }
 }
 @media screen and (max-width: 800px) {
+    h1 {
+        float: left;
+        margin: 0;
+        width: 100%;
+    }
+    h1 a {
+        background: url(../images/logo.png) no-repeat center 0;
+        width: 100%;
+    }
     #menu {
         display: inline-block;
         float: none;
-        padding: 0 0 2%;
+        padding: 2% 0 4%;
         width: 100%;
     }
+    #menu a {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
     #menu li {  
-        margin: 0 20px 0 0;
+        margin: 0;
+        width: 100%;
     }
 }
