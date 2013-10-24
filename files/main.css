@@ -6,8 +6,11 @@
     outline: 0 none;
     padding: 0;
 }
-a, a:link, a:active {
+a,
+a:active,
+a:link {
     color: #666666;
+    text-decoration: none;
 }
 a:hover {
     color: #333333;
@@ -60,6 +63,17 @@ fieldset {
 form {
     margin: 10px 0;
 }
+footer {
+    color: #666666;
+    padding: 20px 0;
+    text-align: center;
+}
+footer a {
+    color: #333333;
+}
+footer a:hover {
+    color: #666666;
+}
 h1 {
     float: left;
     margin: 0 2% 0 0;
@@ -99,6 +113,28 @@ label {
     margin: 0 0 2px;
     padding: 0 2px 0 0;
 }
+nav {
+    float: right;
+}
+nav a {
+    border-bottom: 1px solid #333333;
+    color: #333333;
+    display: block;
+    font-size: 150%;
+    font-weight: bold;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: none;
+}
+nav a:hover {
+    border-bottom: 1px solid #999999;
+    color: #999999;
+}
+nav li {
+    float: left;
+    list-style: none;
+    margin: 0 0 0 30px;
+}
 select {
     border: 1px solid #DDDDDD;
     height: 24px;
@@ -117,7 +153,8 @@ table {
     border-spacing: 0;
     width: 100%;
 }
-td, th {
+td,
+th {
     padding: 5px;
 }
 tbody tr:nth-child(even) {
@@ -170,39 +207,6 @@ ul ul {
     padding: 0 0 10px;
     text-align: justify;
 }
-#footer {
-    color: #666;
-    padding: 20px 0;
-    text-align: center;
-}
-#footer a {
-    color: #333;
-}
-#footer a:hover {
-    color: #666;
-}
-#menu {
-    float: right;
-}
-#menu a {
-    border-bottom: 1px solid #333333;
-    color: #333333;
-    display: block;
-    font-size: 150%;
-    font-weight: bold;
-    height: 100px;
-    line-height: 100px;
-    text-decoration: none;
-}
-#menu a:hover {
-    border-bottom: 1px solid #999999;
-    color: #999999;
-}
-#menu li {
-    float: left;
-    list-style: none;
-    margin: 0 0 0 30px;
-}
 #sidebar {
     float: right;
     padding: 1% 0;
@@ -215,15 +219,12 @@ ul ul {
 #sidebar textarea {
     width: 97%;
 }
-#wrapper {
-    width: 100%;
-}
 .box {
     margin: 0 -1%;
     overflow: hidden;
 }
 .box > div {
-    background: #ccc;
+    background: #cccccc;
     float: left;
     margin: 1%;
     padding: 1%;
@@ -277,9 +278,9 @@ ul ul {
         color: #333333;
         text-decoration: none;
     }
+    footer,
     h1,
-    #footer,
-    #menu {
+    nav {
         display: none !important;
     }
     table {
@@ -287,7 +288,7 @@ ul ul {
     }
 }
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    #menu li a {
+    nav li a {
         font-size: 120%;
     }
 }
@@ -310,18 +311,18 @@ ul ul {
         background: url(../images/logo.png) no-repeat center 0;
         width: 100%;
     }
-    #menu {
+    nav {
         display: inline-block;
         float: none;
         padding: 2% 0 4%;
         width: 100%;
     }
-    #menu a {
+    nav a {
         height: 50px;
         line-height: 50px;
         text-align: center;
     }
-    #menu li {  
+    nav li {  
         margin: 0;
         width: 100%;
     }
