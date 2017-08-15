@@ -1,4 +1,4 @@
-/* CSS Document - DDeveloped by Soluti (http://solutibrasil.com.br | contato@solutibrasil.com.br) */
+/* CSS Document - Developed by Fabio Rocha (http://fabiorochafg.github.io | fabiorochafg@gmail.com) */
 
 * {
     border: 0 none;
@@ -17,6 +17,10 @@ a,
 a:active {
     color: #666;
     text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 a:hover {
     color: #333;
@@ -290,26 +294,45 @@ ul ul {
 }
 
 /* Media-queries */
-@media print {  
+@media print {
     * {
+        background: transparent !important;
+        color: #000 !important;
         margin: 0 !important;
         padding: 0 !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a:after {
+        content: " ("attr(href)")";
+    }
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after { 
+        content: ""; 
     }
     body {
         color: #000;
         font: 9pt serif;
+        line-height: 1.4em;
     }
-    a:link, a:visited {
-        color: #333333;
-        text-decoration: none;
+    h1 {
+        width: 100%;
     }
-    footer,
-    h1,
-    nav {
-        display: none !important;
+    h1 a:after {
+        content: "";
     }
-    table {
-        font: 8pt serif;
+    img {
+        max-width: 100%;
+    }
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    p a {
+        word-wrap: break-word;
     }
 }
 @media screen and (max-width: 1024px) {
