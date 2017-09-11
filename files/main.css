@@ -27,7 +27,6 @@ a:hover {
     text-decoration: underline;
 }
 body {
-    background: #000;
     font-family: sans-serif;
     font-size: 100%;
 }
@@ -38,21 +37,18 @@ input[type="submit"] {
     cursor: pointer;
     display: block;
     font-size: 100%;
-    height: 26px;
-    padding: 0 5px;
+    padding: 5px 10px;
     -webkit-appearance: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
     background: #666;
     color: #eee;
-}
-code {
-    background: #F8F8F8;
-    border: 1px solid #DDD;
-    border-radius: 5px;
-    padding: 0 3px;
 }
 dd {
     float: left;
@@ -76,33 +72,6 @@ fieldset {
 form {
     margin: 10px 0;
 }
-footer,
-footer a {
-    color: #999;
-}
-footer a:hover {
-    color: #ccc;
-}
-footer > a {
-    float: right;
-}
-footer dl {
-    float: left;
-}
-h1 {
-    float: left;
-    margin: 0 2% 0 0;
-}
-h1 a {
-    background: url(../images/logo.png) no-repeat 0 0;
-    display: block;
-    height: 55px;
-    text-indent: -9000px;
-    width: 271px;
-}
-h1 a:hover {
-    opacity: 0.8;
-}
 h2 {
     padding: 0 0 10px;
 }
@@ -111,20 +80,16 @@ h4,
 h5 {
     padding: 20px 0 10px;
 }
-header,
-section {
-    background: #fff;
-}
 input[type="email"],
 input[type="file"],
 input[type="number"],
 input[type="password"],
 input[type="text"] {
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
+    display: block;
     font-size: 110%;
     margin: 0 0 5px;
-    padding: 0 5px;
-    height: 34px;
+    padding: 5px;
 }
 input[type="email"]:focus,
 input[type="file"]:focus,
@@ -133,37 +98,14 @@ input[type="password"]:focus,
 input[type="text"]:focus,
 select:focus,
 textarea:focus {
-    border: 1px solid #AAA;
+    border-color: #aaa;
 }
 label {
     margin: 0 0 2px;
     padding: 0 2px 0 0;
 }
-nav {
-    float: right;
-}
-nav a {
-    border-bottom: 1px solid #333;
-    color: #333;
-    display: block;
-    font-size: 150%;
-    font-weight: bold;
-    height: 55px;
-    line-height: 55px;
-    text-decoration: none;
-}
-nav a:hover {
-    border-bottom: 1px solid #999;
-    color: #999;
-    text-decoration: none;
-}
-nav li {
-    float: left;
-    list-style: none;
-    margin: 0 0 0 30px;
-}
 select {
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     height: 34px;
     margin: 0 0 5px;
 }
@@ -196,13 +138,13 @@ thead tr {
     color: #eee;
 }
 textarea {
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
+    display: block;
     font-family: sans-serif;
     font-size: 100%;
     height: 130px;
     margin: 0 0 5px;
     padding: 5px;
-    width: 480px;   
 }
 ul {
     line-height: 1.5em;
@@ -210,6 +152,76 @@ ul {
 ul ul {
     padding: 0 0 0 15px;
 }
+
+/* containers */
+aside {
+    float: right;
+    padding: 1% 0;
+    width: 19%;
+}
+footer,
+footer a {
+    color: #999;
+}
+footer a:hover {
+    color: #ccc;
+}
+footer > a {
+    float: right;
+}
+footer dl {
+    float: left;
+}
+header h1 {
+    float: left;
+    margin: 0 2% 0 0;
+}
+header h1 a {
+    background-image: url(../images/logo.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 55px;
+    text-indent: -9000px;
+    width: 271px;
+}
+header h1 a:hover {
+    opacity: 0.8;
+}
+header nav {
+    float: right;
+}
+header nav a {
+    color: #333;
+    display: block;
+    float: left;
+    font-size: 150%;
+    font-weight: bold;
+    height: 55px;
+    line-height: 55px;
+    margin: 0 0 0 30px;
+    text-decoration: none;
+}
+header nav a:hover {
+    color: #999;
+    text-decoration: none;
+}
+main {
+    float: left;
+    padding: 1% 2% 1% 0;
+    width: 79%;
+}
+main ol,
+main ul {
+    padding: 0 0 10px 20px;
+}
+main p {
+    line-height: 1.5em;
+    padding: 0 0 5px;
+}
+
+/* extra */
 .accesskeys {
     line-height: 0;
 }
@@ -259,19 +271,6 @@ ul ul {
     padding: 3%;
     width: 100%;
 }
-.content {
-    float: left;
-    padding: 1% 2% 1% 0;
-    width: 79%;
-}
-.content ol,
-.content ul {
-    padding: 0 0 10px 20px;
-}
-.content p {
-    line-height: 1.5em;
-    padding: 0 0 5px;
-}
 .invisible-element {
     display: block !important;
     height: 0 !important;
@@ -279,18 +278,6 @@ ul ul {
     padding: 0 !important;
     text-indent: -9000px !important;
     width: 0 !important;
-}
-.sidebar {
-    float: right;
-    padding: 1% 0;
-    width: 19%;
-}
-.sidebar input[type="email"],
-.sidebar input[type="file"],
-.sidebar input[type="password"],
-.sidebar input[type="text"],
-.sidebar textarea {
-    width: 97%;
 }
 
 /* Media-queries */
@@ -336,8 +323,8 @@ ul ul {
     }
 }
 @media screen and (max-width: 1024px) {
-    #content,
-    #sidebar {
+    main,
+    aside {
         display: inline-block;
         float: none;
         padding: 0 0 2%;
@@ -351,8 +338,7 @@ ul ul {
         width: 100%;
     }
     h1 a {
-        background: url(../images/logo.png) no-repeat center 0;
-        background-size: 100% auto;
+        background-position: center 0;
         width: 100%;
     }
     nav {
@@ -364,19 +350,12 @@ ul ul {
     nav a {
         height: 50px;
         line-height: 50px;
-        text-align: center;
-    }
-    nav li {  
         margin: 0;
+        text-align: center;
         width: 100%;
     }
 }
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    button,
-    input[type="button"],
-    input[type="submit"] {
-        height: 56px;
-    }
     nav a {
         font-size: 120%;
     }
