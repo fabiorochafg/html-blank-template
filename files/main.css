@@ -33,7 +33,9 @@ body {
 button,
 input[type="button"],
 input[type="submit"] {
+    background-color: #4D7EA8;
     clear: both;
+    color: #fff;
     cursor: pointer;
     display: block;
     font-size: 100%;
@@ -69,9 +71,6 @@ fieldset {
     margin: 10px 0 20px;
     padding: 15px;
 }
-form {
-    margin: 10px 0;
-}
 h2 {
     padding: 0 0 10px;
 }
@@ -96,13 +95,8 @@ input[type="file"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus,
-select:focus,
 textarea:focus {
     border-color: #aaa;
-}
-label {
-    margin: 0 0 2px;
-    padding: 0 2px 0 0;
 }
 select {
     border: 1px solid #ddd;
