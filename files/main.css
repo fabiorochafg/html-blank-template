@@ -33,6 +33,7 @@ body {
 button,
 input[type="button"],
 input[type="submit"] {
+    background-color: #000;
     clear: both;
     color: #fff;
     cursor: pointer;
@@ -48,7 +49,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-    background: #666;
+    background-color: #666;
     color: #eee;
 }
 dd {
@@ -62,8 +63,8 @@ dt {
     margin: 0 5px 0 0;
 }
 fieldset {
-    background: #F8F8F8;
-    border: 1px solid #DDD;
+    background-color: #eee;
+    border: 1px solid #ddd;
     border-radius: 5px;
     clear: both;
     display: table;
@@ -120,14 +121,14 @@ th {
     padding: 5px;
 }
 tbody tr:nth-child(even) {
-    background: #f1f1f1;
+    background-color: #eee;
 }
 thead th {
     font-size: 105%;
     text-align: left;
 }
 thead tr {
-    background: #999;
+    background-color: #ddd;
     color: #eee;
 }
 textarea {
@@ -215,45 +216,6 @@ main p {
 }
 
 /* extra */
-.accesskeys {
-    line-height: 0;
-}
-.accesskeys li {
-    display: block;
-    text-indent: -9000px;
-}
-.box {
-    margin: 0 -1%;
-    overflow: hidden;
-}
-.box > div {
-    background: #ccc;
-    float: left;
-    margin: 1%;
-    padding: 1%;
-    width: 98%;
-}
-.box .box12 {
-    width: 98%;
-}
-.box .box8 {
-    width: 64.6667%;
-}
-.box .box6 {
-    width: 48%;
-}
-.box .box4 {
-    width: 31.3333%;
-}
-.box .box3 {
-    width: 23%;
-}
-.box .box2 {
-    width: 14.6666%;
-}
-.box .box1 {
-    width: 6.3333%;
-}
 .breadcrumbs {
     padding: 0 0 10px;
 }
@@ -264,19 +226,11 @@ main p {
     padding: 3%;
     width: 100%;
 }
-.invisible-element {
-    display: block !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-indent: -9000px !important;
-    width: 0 !important;
-}
 
 /* Media-queries */
 @media print {
     * {
-        background: transparent !important;
+        background-color: transparent !important;
         color: #000 !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -325,12 +279,12 @@ main p {
     }
 }
 @media screen and (max-width: 800px) {
-    h1 {
+    header h1 {
         float: left;
         margin: 0;
         width: 100%;
     }
-    h1 a {
+    header h1 a {
         background-position: center 0;
         width: 100%;
     }

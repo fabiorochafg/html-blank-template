@@ -1,8 +1,6 @@
-html-blank-template
-===================
+html-starter-template
+=====================
 
-An HTML5 blank template. Use it for build your own theme!
+This is an HTML5 starter template. Use it for build your own site from zero!
 
-It has the basic structure/layout for new site.
-
-It's yours starting point!
+It has the basic structure/layout for any new site.
