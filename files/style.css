@@ -1,6 +1,16 @@
 /* CSS Document - Developed by Fabio Rocha (http://fabiorochafg.github.io | fabiorochafg@gmail.com) */
 
 /* base */
+:root {
+    --black-color: #333;
+    --grey-color: #666;
+    --medium-grey-color: #ddd;
+    --light-grey-color: #eee;
+    --white-color: #fff;
+    --default-inner-margin: 25px;
+    --default-margin: 50px;
+    --header-height: 55px;
+}
 * {
     border: 0 none;
     margin: 0;
@@ -16,7 +26,7 @@
 }
 a,
 a:active {
-    color: #666;
+    color: var(--grey-color);
     text-decoration: none;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -24,7 +34,7 @@ a:active {
     transition: all 0.4s;
 }
 a:hover {
-    color: #333;
+    color: var(--black-color);
     text-decoration: underline;
 }
 body {
@@ -58,14 +68,14 @@ th {
     padding: 5px;
 }
 tbody tr:nth-child(even) {
-    background-color: #eee;
+    background-color: var(--light-grey-color);
 }
 thead th {
     font-size: 105%;
     text-align: left;
 }
 thead tr {
-    background-color: #ddd;
+    background-color: var(--medium-grey-color);
 }
 ul {
     line-height: 1.5em;
@@ -78,9 +88,9 @@ ul ul {
 button,
 input[type="button"],
 input[type="submit"] {
-    background-color: #000;
+    background-color: var(--black-color);
     clear: both;
-    color: #fff;
+    color: var(--white-color);
     cursor: pointer;
     display: block;
     font-size: 100%;
@@ -95,12 +105,12 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-    background-color: #666;
-    color: #eee;
+    background-color: var(--grey-color);
+    color: var(--light-grey-color);
 }
 fieldset {
-    background-color: #eee;
-    border: 1px solid #ddd;
+    background-color: var(--light-grey-color);
+    border: 1px solid var(--medium-grey-color);
     border-radius: 5px;
     clear: both;
     display: table;
@@ -112,7 +122,7 @@ input[type="file"],
 input[type="number"],
 input[type="password"],
 input[type="text"] {
-    border: 1px solid #ddd;
+    border: 1px solid var(--medium-grey-color);
     font-size: 100%;
     margin-bottom: 10px;
     padding: 10px;
@@ -124,14 +134,14 @@ input[type="number"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus,
 textarea:focus {
-    border-color: #aaa;
+    border-color: var(--grey-color);
 }
 select {
-    border: 1px solid #ddd;
+    border: 1px solid var(--medium-grey-color);
     height: 34px;
     margin: 0 0 5px;
 }
-select option {
+option {
     padding: 3px 5px;
 }
 select[multiple="multiple"] {
@@ -141,7 +151,7 @@ select[multiple="multiple"] option {
     padding: 5px;
 }
 textarea {
-    border: 1px solid #ddd;
+    border: 1px solid var(--medium-grey-color);
     display: block;
     font-family: sans-serif;
     font-size: 100%;
@@ -154,7 +164,7 @@ textarea {
 /* header */
 header h1 {
     float: left;
-    margin: 0 2% 0 0;
+    margin: 0 var(--default-margin) 0 0;
 }
 header h1 a {
     background-image: url(../images/logo.svg);
@@ -162,7 +172,7 @@ header h1 a {
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
-    height: 55px;
+    height: var(--header-height);
     text-indent: -9000px;
     width: 271px;
 }
@@ -173,31 +183,31 @@ header nav {
     float: right;
 }
 header nav a {
-    color: #333;
+    color: var(--black-color);
     display: block;
     float: left;
     font-size: 120%;
     font-weight: 600;
-    height: 55px;
-    line-height: 55px;
+    height: var(--header-height);
+    line-height: var(--header-height);
     margin: 0 0 0 30px;
     text-decoration: none;
 }
 header nav a:hover {
-    color: #999;
+    color: var(--grey-color);
     text-decoration: none;
 }
 
 /* sections */
 aside {
     float: right;
-    padding: 1% 0;
-    width: 19%;
+    padding: var(--default-inner-margin) 0;
+    width: 20%;
 }
 main > section {
     float: left;
-    padding: 1% 2% 1% 0;
-    width: 79%;
+    padding: var(--default-inner-margin) var(--default-margin) var(--default-inner-margin) 0;
+    width: 80%;
 }
 main ol,
 main ul {
@@ -211,10 +221,10 @@ main p {
 /* footer */
 footer,
 footer a {
-    color: #999;
+    color: var(--grey-color);
 }
 footer a:hover {
-    color: #ccc;
+    color: var(--medium-grey-color);
 }
 footer > a {
     float: right;
@@ -231,7 +241,7 @@ footer dl {
     clear: both;
     display: inline-block;
     margin: 0 auto;
-    padding: 50px;
+    padding: var(--default-margin);
     width: 100%;
 }
 
@@ -282,11 +292,16 @@ footer dl {
     aside {
         display: inline-block;
         float: none;
-        padding: 0 0 2%;
+        padding: 0 0 var(--default-inner-margin);
         width: 100%;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
+    :root {
+        --default-inner-margin: 20px;
+        --default-margin: 20px;
+        --header-height: 50px;
+    }
     header h1 {
         float: left;
         margin: 0;
@@ -299,18 +314,13 @@ footer dl {
     nav {
         display: inline-block;
         float: none;
-        padding: 2% 0 4%;
+        padding: var(--default-inner-margin) 0 var(--default-margin);
         width: 100%;
     }
     nav a {
-        height: 50px;
-        line-height: 50px;
         margin: 0;
         text-align: center;
         width: 100%;
-    }
-    .container {
-        padding: 20px;
     }
 }
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
